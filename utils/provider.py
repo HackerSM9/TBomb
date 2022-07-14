@@ -15,7 +15,7 @@ class APIProvider:
             PROVIDERS = json.load(open('apidata.json', 'r'))
         except Exception:
             PROVIDERS = requests.get(
-                "https://github.com/Hackersm9/TBomb/raw/master/apidata.json"
+                "https://github.com/Hackersm9/TBomb/raw/main/apidata.json"
             ).json()
         self.config = None
         self.cc = cc
