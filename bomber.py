@@ -74,7 +74,7 @@ def bann_text():
 
 def check_intr():
     try:
-        requests.get("https://motherfuckingwebsite.com")
+        requests.get("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6d\x6f\x74\x68\x65\x72\x66\x75\x63\x6b\x69\x6e\x67\x77\x65\x62\x73\x69\x74\x65\x2e\x63\x6f\x6d")
     except Exception:
         bann_text()
         mesgdcrt.FailureMessage("Poor internet connection detected")
@@ -121,7 +121,7 @@ def do_zip_update():
     else:
         mesgdcrt.FailureMessage("Unable to update TBomb.")
         mesgdcrt.WarningMessage(
-            "Grab The Latest one From https://github.com/TheSpeedX/TBomb.git")
+            "Grab The Latest one From https://github.com/HackerSM9/TBomb.git")
 
     sys.exit()
 
@@ -155,7 +155,7 @@ def do_git_update():
         mesgdcrt.GeneralMessage("Then run command:")
         print(
             "git checkout . && "
-            "git pull https://github.com/TheSpeedX/TBomb.git HEAD")
+            "git pull https://github.com/HackerSM9/TBomb.git HEAD")
     sys.exit()
 
 
@@ -173,7 +173,7 @@ def check_for_updates():
         return
     mesgdcrt.SectionMessage("Checking for updates")
     fver = requests.get(
-        "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.version"
+        "https://raw.githubusercontent.com/HackerSM9/TBomb/master/.version"
     ).text.strip()
     if fver != __VERSION__:
         mesgdcrt.WarningMessage("An update is available")
